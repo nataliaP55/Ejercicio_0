@@ -1,0 +1,93 @@
+    <!--
+Crear una pagina que muestre 3 productos comestibles y que permita al cliente elegir 
+alguno para comprar, además de la cantidad a agregar del mismo al carrito de compra, 
+el producto a comprar deberia poder pagarse en 1,3 y hasta 6 cuotas si es con tarjeta 
+de credito y en un pago con efectivo ofreciendo en este caso un descuento del 20% 
+Al finalizar la compra debera figurar una factura informando la cantidad, 
+costo individual, el costo a pagar total, el tipo de pago y la forma a pagar 
+segun corresponda
+
+Tener en cuenta que solo se podra pagar en 3 cuotas si se compran 3 productos o más,
+ en 6 cuotas si se compran más de 7 productos
+    -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-top: 10%;display: grid; place-items: center;">
+        <h2>Productos</h2>
+        <div>
+            <input id="cantidad_fideos" type="number" placeholder="cantidad de fideos">
+            <button id="Fideos" onclick="fideos()" style="margin-right: 15px;">Fideos $200</button><br>
+            <img src='./fideos.jpg'> 
+            
+            
+        </div>
+        <div>
+            <input id="cantidad_aceite" type="number" placeholder="cantidad de aceite">
+            <button id="Aceite" onclick="aceite()" style="float:left; margin-right: 15px;">Aceite $300</button><br>
+            <img width="200" height="200" src='./aceite.jpg'> 
+            
+        </div>
+        <div>
+             <input id="cantidad_salsa" type="number" placeholder="cantidad de salsa">
+             <button id="Salsa" onclick="salsa()" style="float:left; margin-right: 15px;">Salsa $100</button><br>
+             <img src='./salsa.jpg'> 
+                        
+        </div>
+        
+        <div id="ver_compra_uno">        
+        </div>
+        <div id="ver_compra_dos">        
+        </div>
+        <div id="ver_compra_tres">        
+        </div>
+
+       <div >
+            <button id="compra_total" onclick="compraTotal()" style="float:left; margin-right: 15px;">Comprar total</button><br>    
+        </div>       
+
+        <div id="ver_compra_final">        
+        </div>
+
+
+        <div style="margin-top: 10%;display: grid; place-items: center;">
+            <h2>Opciones de pago</h2>
+            <div>
+                <button id="0.8" onclick="compraCuotas(this.id)" style="margin-right: 15px;">Efectivo</button>
+                <h4 style=" float:right;margin-top: 0px">Efectivo</h4>
+            </div>
+            <div>
+                <button id="1" onclick="compraCuotas(this.id)" style="float:left; margin-right: 15px;">1 cuota</button>
+                <h4 style="float:right;margin-top: 0px">1 cuota</h4>
+            </div>
+            <div>
+                 <button id="3" onclick="compraCuotas(this.id)" style="float:left; margin-right: 15px;">3 cuotas</button>
+                <h4 style="float:right;margin-top: 0px">3 cuotas</h4>
+            </div>
+            <div>
+                <button id="6" onclick="compraCuotas(this.id)" style="float:left; margin-right: 15px;">6 cuotas</button>
+                <h4 style="float:right;margin-top: 0px">6 cuotas</h4>
+            </div>
+
+            
+
+            </div>
+            <div id="pagoCuotas">
+
+                
+            </div>
+        </div>
+        
+
+
+    <script src="ejercicio0.js"></script>
+</body>
+</html>
